@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title> Helple - Histórico</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div class="caixa">
+			<h1><img class="imgLogo" src="/img/logoH2.png"></h1>
+
+			<nav>
+				<ul class="navegacao">
+					<li><a href="/">início</a></li>
+					<li><a href="/doacao">Doação</a></li>
+					<li><a href="/contribuicao">Histórico</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="corpo-doacoes">
+
+		<div class="principal">
+			<h1 class="titulo-principal">Visão geral de doações arrecadadas</h1>
+
+
+			<div class="tabela-doacoes">
+				<table>
+					<tr>
+						<thead>
+							<th>Produtos</th>
+							<th>Quantidade</th>
+						</thead>
+					</tr>
+					<tr>
+						<td>Arroz</td>
+						<td>
+							<%=dados.recordset[0].arroz%>
+						</td>
+					</tr>
+					<tr>
+						<td>Feijão</td>
+						<td>
+							<%=dados.recordset[0].feijao%>
+						</td>
+					</tr>
+					<tr>
+						<td>Água</td>
+						<td>
+							<%=dados.recordset[0].agua%>
+						</td>
+					</tr>
+					<tr>
+						<td>Óleo</td>
+						<td>
+							<%=dados.recordset[0].oleo%>
+						</td>
+					</tr>
+					<tr>
+						<td>Macarrão</td>
+						<td>
+							<%=dados.recordset[0].macarrao%>
+						</td>
+					</tr>
+					<tr>
+						<td>Molho de Tomate</td>
+						<td>
+							<%=dados.recordset[0].molhoDeTomate%>
+						</td>
+					</tr>
+
+				</table>
+			</div>
+
+
+
+
+
+		</div>
+	</main>
+
+	<footer>
+		<img class="imgLogo" src="/img/logoH2.png">
+		<p class="copyright">&copy; Copyright Helple - 2021</p>
+	</footer>
+
+
+	<script>
+		console.log("<%=dados%>")
+	</script>
+
+</body>
+
+</html>

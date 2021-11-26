@@ -4,7 +4,16 @@ body {
 
 header {
   background: #b0e2ff;
-  padding: 20px 0;
+
+}
+
+img {
+  border-radius: 20px;
+}
+
+.tabela-doacoes {
+  display: grid;
+  text-align: center;
 }
 
 .caixa {
@@ -15,7 +24,7 @@ header {
 
 nav {
   position: absolute;
-  top: 110px;
+  top: 70px;
   right: 0;
 }
 
@@ -37,6 +46,8 @@ nav a:hover {
   text-decoration: underline;
 }
 
+
+
 .produtos {
   width: 940px;
   height: 450px;
@@ -45,8 +56,8 @@ nav a:hover {
 }
 
 .imgLogo {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 150px;
 }
 
 .produtos li {
@@ -91,7 +102,7 @@ nav a:hover {
 footer {
   text-align: center;
   background: #607b8b;
-  padding: 40px 0;
+  padding: 10px 0;
 }
 
 .copyright {
@@ -123,6 +134,10 @@ form legend {
   margin: 20px 0;
 }
 
+.campo-itens {
+  width: 30px;
+}
+
 .enviar {
   width: 40%;
   padding: 15px 0;
@@ -138,6 +153,11 @@ form legend {
 .enviar:hover {
   background: #ee7600;
   transform: scale(1.2);
+}
+
+.data-coleta {
+  width: 30%;
+  margin: 10px 0 15px 0;
 }
 
 table {
@@ -160,6 +180,7 @@ th {
 
 .banner {
   width: 100%;
+  padding-bottom: 2rem;
 }
 
 main {
@@ -170,15 +191,24 @@ main {
   text-align: center;
   font-size: 2em;
   font-weight: 800;
-  margin: 0 0 1em;
+  margin: 0 0 1.5rem;
   clear: left;
 }
 
 .principal {
   padding: 3em 0;
-  background: #fefefe;
   width: 940px;
   margin: 0 auto;
+}
+
+.corpo-doacoes {
+  background: linear-gradient(white, #b0e2ff );
+}
+
+.tabela-doacoes td, th {
+  font-size: 1rem;
+  padding: 25px 15px;
+  font-weight: bold;
 }
 
 .principal p {
@@ -272,6 +302,10 @@ main {
   fieldset,
   .enviar {
     width: auto;
+  }
+
+  .input-padrao {
+    width: 65%;
   }
 
   h1 {

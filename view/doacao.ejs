@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Helple - Doação</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div class="caixa">
+			<h1><img class="imgLogo" src="/img/logoH2.png"></h1>
+
+			<nav>
+				<ul class="navegacao">
+					<li><a href="/">início</a></li>
+					<li><a href="/doacao">Doação</a></li>
+					<li><a href="/contribuicao">Histórico</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="corpo-doacoes">
+
+
+
+		<section class="principal">
+
+			<label style="cursor: pointer;" id="btnDark">🌓</label>
+			<form action="/cadastro" method="post">
+				<label for="nomesobrenome">Nome e sobrenome</label>
+				<input type="text" id="nomesobrenome" name="nomesobrenome" class="input-padrao" required>
+
+				<label for="cpf">CPF</label>
+				<input type="text" id="cpf" name="cpf" class="input-padrao" required>
+
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+				<label for="telefone">Telefone</label>
+				<input type="tel" id="telefone" name="telefone" class="input-padrao" required placeholder="(XX) XXXX-XXXX">
+
+				<label for="telefone">Celular</label>
+				<input type="tel" id="celular" name="celular" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+				<label for="cep">CEP</label>
+				<input type="text" id="cep" name="cep" class="input-padrao" required>
+
+				<label for="endereco">Endereço completo</label>
+				<input type="text" id="endereco" name="endereco" class="input-padrao" required
+					placeholder="Rua das cerejeiras, 123, Bairro do Limão ">
+
+
+
+				<label for="mensagem">Itens para doar:</label>
+				<div class="itens-doacao">
+					<p><input id="item1" class="campo-itens" value="0" name="item1" type="number"> Arroz<small> (pacote)</small>
+					</p>
+					<p><input id="item2" class="campo-itens" value="0" name="item2" type="number"> Feijão<small> (pacote)</small>
+					</p>
+					<p><input id="item3" class="campo-itens" value="0" name="item3" type="number"> Água<small> (Garrafa
+							1L)</small>
+					</p>
+					<p><input id="item4" class="campo-itens" value="0" name="item4" type="number"> Óleo<small> (garrafa
+							900ml)</small></p>
+					<p><input id="item5" class="campo-itens" value="0" name="item5" type="number"> Macarrão<small>
+							(pacote)</small>
+					</p>
+					<p><input id="item6" class="campo-itens" value="0" name="item6" type="number"> Molho de
+						tomate<small> (lata)</small></p>
+				</div>
+
+
+				<label for="data-coleta">Qual a data que podemos retirar os itens?</label>
+				<input type="date" id="dataColeta" class="data-coleta" name="dataColeta" class="input-padrao" required>
+
+				<fieldset>
+					<legend>Qual horário prefere ser atendido?</legend>
+					<select id="horarioAtendimento" name="horarioAtendimento">
+						<option>Manhã</option>
+						<option>Tarde</option>
+						<option>Noite</option>
+					</select>
+				</fieldset>
+
+
+				<fieldset style="margin-top: 15px;">
+					<legend>Como prefere o nosso contato?</legend>
+
+					<label for="radio-email">
+						<input type="radio" id="nossoContato" name="nossoContato" value="email" id="radio-email">E-mail
+					</label>
+
+
+					<label for="radio-telefone">
+						<input type="radio" id="nossoContato" name="nossoContato" value="Telefone" id="radio-telefone">Telefone
+					</label>
+
+
+					<label for="radio-whatsapp">
+						<input type="radio" name="nossoContato" id="nossoContato" value="WhatsApp" id="radio-whatsapp"
+							checked>WhatsApp
+					</label>
+
+				</fieldset>
+
+
+
+				<label class="checkbox"><input type="checkbox" id="atualizacoes" name="atualizacoes" checked>Gostaria de receber
+					nossas atualizações
+					por
+					e-mail?</label>
+
+				<input type="submit" value="Enviar Formulário" id="btnCadastro" class="enviar">
+
+
+				<table>
+					<thead>
+						<tr>
+							<th>Dia</th>
+							<th>Horário</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>Segunda</td>
+							<td>8h ~ 20h</td>
+						</tr>
+
+						<tr>
+							<td>Terça</td>
+							<td>8h ~ 20h</td>
+						</tr>
+
+						<tr>
+							<td>Quarta</td>
+							<td>8h ~ 16h</td>
+						</tr>
+
+						<tr>
+							<td>Quinta</td>
+							<td>8h ~ 20h</td>
+						</tr>
+
+						<tr>
+							<td>Sexta</td>
+							<td>8h ~ 20h</td>
+						</tr>
+
+						<tr>
+							<td>Sábado</td>
+							<td>8h ~ 16h</td>
+						</tr>
+
+					</tbody>
+				</table>
+
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<img class="imgLogo" src="/img/logoH2.png">
+		<p class="copyright">&copy; Copyright Helple - 2021</p>
+	</footer>
+
+	<script>
+
+		let btnCadastro = document.getElementById('btnCadastro')
+
+		btnCadastro.addEventListener('click', function (event) {
+
+			let nomesobrenome = document.getElementById('nomesobrenome').value
+			let cpf = document.getElementById('cpf').value
+			let email = document.getElementById('email').value
+			let telefone = document.getElementById('telefone').value
+			let celular = document.getElementById('celular').value
+			let cep = document.getElementById('cep').value
+			let endereco = document.getElementById('endereco').value
+			let item1 = document.getElementById('item1').value
+			let item2 = document.getElementById('item2').value
+			let item3 = document.getElementById('item3').value
+			let item4 = document.getElementById('item4').value
+			let item5 = document.getElementById('item5').value
+			let item6 = document.getElementById('item6').value
+			let dataColeta = document.getElementById('datacoleta').value
+			let horarioAtendimento = document.getElementById('horarioAtendimento').value
+			let nossoContato = document.getElementById('nossoContato').value
+			let atualizacoes = document.getElementById('atualizacoes').value
+
+			var oReq = new XMLHttpRequest();
+			oReq.onload = function () {
+			};
+			oReq.open("get", "http://localhost:12345/?matricula=" + valorCad);
+			oReq.send();
+		})
+
+			<% if (sucesso == "Sucesso!") { %>
+				alert("Doação registrada!")
+				<% } %>
+
+	</script>
+
+
+</body>
+
+</html>
